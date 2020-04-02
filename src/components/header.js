@@ -45,9 +45,9 @@ class Header extends React.Component {
                   <NavLink href="/about">About</NavLink>
                 </NavItem>
                 <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
-	                  <label for="themeSwitch" class="theme-switch__label">
-		                  <span></span>
-	                  </label>
+	                <label for="themeSwitch" class="theme-switch__label">
+		                <span></span>
+	                </label>
               </Nav>
             </Collapse>
           </div>
