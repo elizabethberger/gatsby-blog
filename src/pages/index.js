@@ -11,15 +11,15 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Page two" />
     <h1>Home page</h1>
-    <Row>
-      <Col md="8">
         <StaticQuery query={indexQuery} render={ data => {
         return (
           <div>
           {data.allMarkdownRemark.edges.map(({node}) => (
-              <Post title={node.frontmatter.title}
+              <Post
+              key={node.id}
+                title={node.frontmatter.title}
                 author={node.frontmatter.author}
-                path={node.frontmatter.path}
+                slug={node.fields.slug}
                 date={node.frontmatter.date}
                 body={node.excerpt}
                 fluid={node.frontmatter.image.childImageSharp.fluid}
@@ -29,11 +29,6 @@ const IndexPage = () => (
           </div>
           )
         }} />
-      </Col>
-      <Col md="4">
-        <Sidebar />
-      </Col>
-    </Row>
   </Layout>
 )
 
@@ -47,7 +42,6 @@ const indexQuery = graphql `
             title
             date(formatString: "MMM Do YYYY")
             author
-            path
             tags
             image{
               childImageSharp{
@@ -56,6 +50,9 @@ const indexQuery = graphql `
                 }
               }
             }
+          }
+          fields {
+            slug
           }
           excerpt
         }

@@ -2,7 +2,6 @@
 title: 'Second Post'
 date: 2020-04-01 12:00:00
 author: 'Ela Szulc'
-path: '/second-post'
 image: ../../images/code1.jpg
 tags:
 - Web development

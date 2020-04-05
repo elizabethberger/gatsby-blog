@@ -1,87 +1,52 @@
-// const _ = require("lodash")
-// const path = require("path")
+const path = require('path')
+const { slugify } = require('./src/util/utilityFunctions')
 
-// exports.createPages = ({ graphql, actions }) => {
-//   const { createPage } = actions
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === 'MarkdownRemark') {
+    const slugFromTitle = slugify(node.frontmatter.title)
+    createNodeField({
+      node,
+      name: 'slug',
+      value: slugFromTitle,
+    })
+  }
+}
 
-//   return new Promise((resolve, reject) => {
-//     const pages = []
-//     const blogPost = path.resolve("src/templates/blog-post.js")
-//     const tagPages = path.resolve("src/templates/tag-page.js")
-//     graphql(
-//       `
-//         {
-//           allMarkdownRemark(
-//             limit: 1000
-//             filter: { frontmatter: { draft: { ne: true } } }
-//           ) {
-//             edges {
-//               node {
-//                 fields {
-//                   slug
-//                 }
-//                 frontmatter {
-//                   tags
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       `
-//     ).then(result => {
-//       if (result.errors) {
-//         console.log(result.errors)
-//         resolve()
-//         // reject(result.errors);
-//       }
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions
 
-//       // Create blog posts pages.
-
-//       // Tag pages.
-//       let tags = []
-    
-//       tags = _.uniq(tags)
-//       tags.forEach(tag => {
-//         const tagPath = `/tags/${_.kebabCase(tag)}/`
-//         createPage({
-//           path: tagPath,
-//           component: tagPages,
-//           context: {
-//             tag,
-//           },
-//         })
-//       })
-
-//       resolve()
-//     })
-//   })
-// }
-
-// //exports.postBuild = require('./post-build')
-
-// // Add custom url pathname for blog posts.
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   const { createNodeField } = actions
-
-//   if (node.internal.type === `File`) {
-//     const parsedFilePath = path.parse(node.absolutePath)
-//     const slug = `/${parsedFilePath.dir.split("---")[1]}/`
-//     createNodeField({ node, name: `slug`, value: slug })
-//   } else if (
-//     node.internal.type === `MarkdownRemark` &&
-//     typeof node.slug === "undefined"
-//   ) {
-//     const fileNode = getNode(node.parent)
-//     createNodeField({
-//       node,
-//       name: `slug`,
-//       value: fileNode.fields.slug,
-//     })
-//     if (node.frontmatter.tags) {
-//       const tagSlugs = node.frontmatter.tags.map(
-//         tag => `/tags/${_.kebabCase(tag)}/`
-//       )
-//       createNodeField({ node, name: `tagSlugs`, value: tagSlugs })
-//     }
-//   }
-// }
+  return graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              author
+              tags
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `).then(res => {
+        if(res.errors) return Promise.reject(res.errors)
+  // Create single post pages
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: templates.post,
+      context: {
+        // Passing slug for template to use to fetch the post
+        slug: node.fields.slug,
+        // Find author imageUrl from author array and pass it to template
+        imageUrl: authors.find(x => x.name === node.frontmatter.author)
+          .imageUrl,
+      },
+    })
+  })
+})
+}
