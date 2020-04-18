@@ -8,7 +8,7 @@ const Footer = () => (
       <ul className="social-links-list">
         <li>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/elzbieta.20"
             target="_blank"
             rel="noopener noreferrer"
             className="facebook"
@@ -18,7 +18,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.facebook.com"
+            href="https://twitter.com/szulc_elzbieta"
             target="_blank"
             rel="noopener noreferrer"
             className="twitter"
@@ -28,7 +28,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.facebook.com"
+            href="https://www.instagram.com/elzszulc"
             target="_blank"
             rel="noopener noreferrer"
             className="instagram"
@@ -38,17 +38,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="google"
-          >
-            <i className="fab fa-google fa-2x" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com"
+            href="https://www.linkedin.com/in/el%C5%BCbieta-szulc-a27075167/"
             target="_blank"
             rel="noopener noreferrer"
             className="linkedin"
