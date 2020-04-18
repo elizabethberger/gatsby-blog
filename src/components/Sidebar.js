@@ -45,26 +45,6 @@ const Sidebar = ({ author, authorFluid }) => (
               </li>
               <li>
                 <a
-                  href={author.instagram}
-                  targe="_blank"
-                  rel="noopener noreferrer"
-                  className="instagram"
-                >
-                  <i className="fab fa-instagram fa-lg" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href={author.google}
-                  targe="_blank"
-                  rel="noopener noreferrer"
-                  className="google"
-                >
-                  <i className="fab fa-google fa-lg" />
-                </a>
-              </li>
-              <li>
-                <a
                   href={author.linkedin}
                   targe="_blank"
                   rel="noopener noreferrer"

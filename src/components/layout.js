@@ -7,7 +7,7 @@ import Sidebar from './Sidebar'
 import Footer from './Footer'
 import { Row, Col } from 'reactstrap'
 
-const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => (
+const Layout = ({ authorImageFluid, children, postAuthor }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
