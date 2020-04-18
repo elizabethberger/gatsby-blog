@@ -6,8 +6,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout pageTitle="My perosnal blog">
-    <SEO title="Page two" />
+  <Layout pageTitle="DevLover">
+    <SEO title="Home page" />
     <h1>Home page</h1>
     <StaticQuery query={indexQuery} render={ data => {
       return (
