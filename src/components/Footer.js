@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => (
   <div className="site-footer">
-    <h4 className="text-center">My personal blog</h4>
-    <p className="text-center">Follow us</p>
+    <h4 className="text-center">DevLover</h4>
+    <p className="text-center">Follow me</p>
     <div className="footer-social-links">
       <ul className="social-links-list">
         <li>

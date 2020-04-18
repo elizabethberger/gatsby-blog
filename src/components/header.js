@@ -31,12 +31,13 @@ class Header extends React.Component {
       <div>
         <Navbar fixed="top" light expand="sm">
           <div className="container">
-            <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
+          <div className="logo"><a href="/"><img src="icons/icon.png"/></a></div>
+            <NavbarBrand href="images/icon.png">{this.props.siteTitle}</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/team">Team</NavLink>
+                  <NavLink href="/team">Mission</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/tags">Tags</NavLink>
@@ -44,10 +45,6 @@ class Header extends React.Component {
                 <NavItem>
                   <NavLink href="/about">About</NavLink>
                 </NavItem>
-                <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
-	                <label for="themeSwitch" class="theme-switch__label">
-		                <span></span>
-	                </label>
               </Nav>
             </Collapse>
           </div>
