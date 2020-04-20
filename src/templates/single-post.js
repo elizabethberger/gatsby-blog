@@ -95,20 +95,6 @@ const SinglePost = ({ data, pageContext, location }) => {
           <li>
             <a
               href={
-                'https://plus.google.com/share?url=' +
-                baseUrl +
-                pageContext.slug
-              }
-              className="google"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-google fa-2x" />
-            </a>
-          </li>
-          <li>
-            <a
-              href={
                 'https://www.linkedin.com/shareArticle?url=' +
                 baseUrl +
                 pageContext.slug

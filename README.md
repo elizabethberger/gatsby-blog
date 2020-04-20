@@ -9,7 +9,7 @@ My personal blog site : work still in progress. Here I want to describe programm
 
 ## Link to the website : 
 
-[Personal website](https://personal-growth-app.netlify.com/) :rocket:
+[Personal website](devlover.netlify.app/) :rocket:
 
 ## To do
 
