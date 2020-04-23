@@ -17,7 +17,16 @@ exports.onCreateNode = ({ node, actions }) => {
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  return graphql(`
+  // Page templates
+  const templates = {
+    post: path.resolve('src/templates/single-post.js'),
+    postList: path.resolve('src/templates/post-list.js'),
+    tag: path.resolve('src/templates/tag-posts.js'),
+    tagsPage: path.resolve('src/templates/tags-page.js'),
+    authorPosts: path.resolve('src/templates/author-posts.js'),
+  }
+
+  const res = await graphql(`
     {
       allMarkdownRemark {
         edges {
@@ -33,20 +42,43 @@ exports.createPages = async ({ actions, graphql }) => {
         }
       }
     }
-  `).then(res => {
-        if(res.errors) return Promise.reject(res.errors)
+  `)
+
+  if (res.errors) return Promise.reject(res.errors)
+
+  // Extracting all posts from res
+  const posts = res.data.allMarkdownRemark.edges
+
   // Create single post pages
   posts.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: templates.post,
       context: {
+        // Passing slug for template to use to fetch the post
         slug: node.fields.slug,
-        // Find author imageUrl
+        // Find author imageUrl from author array and pass it to template
         imageUrl: authors.find(x => x.name === node.frontmatter.author)
           .imageUrl,
       },
     })
   })
-})
+
+  // Create posts pagination pages
+  const postsPerPage = 2
+  const numberOfPages = Math.ceil(posts.length / postsPerPage)
+
+  // Get all tags
+  let tags = []
+  _.each(posts, edge => {
+    if (_.get(edge, 'node.frontmatter.tags')) {
+      tags = tags.concat(edge.node.frontmatter.tags)
+    }
+  })
+
+  let tagPostCounts = {} // { tutorial: 2, design: 1}
+  tags.forEach(tag => {
+    // Or 0 cause it might not exist yet
+    tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1
+  })
 }
