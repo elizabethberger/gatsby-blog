@@ -14,7 +14,7 @@ const SinglePost = ({ data, pageContext, location }) => {
 
   const baseUrl = 'https://gatsbytutorial.co.uk/'
 
-  const disqusShortname = 'https-gatsbytutorial-co-uk'
+  const disqusShortname = 'gatsby'
   const disqusConfig = {
     identifier: data.markdownRemark.id,
     title: post.title,
