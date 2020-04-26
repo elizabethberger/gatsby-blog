@@ -28,3 +28,10 @@
       }
     }
   }
+  
+.logo {
+$breakpoint-tablet: 576px;
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}

@@ -32,7 +32,7 @@ class Header extends React.Component {
         <Navbar fixed="top" light expand="sm">
           <div className="container">
           <div className="logo"><a href="/"><img src="icons/icon.png"/></a></div>
-            <NavbarBrand href="images/icon.png">{this.props.siteTitle}</NavbarBrand>
+            <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
