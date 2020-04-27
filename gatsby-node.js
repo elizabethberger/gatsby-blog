@@ -1,14 +1,15 @@
-const path = require('path')
-const { slugify } = require('./src/util/utilityFunctions')
-const authors = require('./src/util/authors')
+const path = require("path")
+const { slugify } = require("./src/util/utilityFunctions")
+const authors = require("./src/util/authors")
+const _ = require('lodash')
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === "MarkdownRemark") {
     const slugFromTitle = slugify(node.frontmatter.title)
     createNodeField({
       node,
-      name: 'slug',
+      name: "slug",
       value: slugFromTitle,
     })
   }
@@ -19,11 +20,11 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // Page templates
   const templates = {
-    post: path.resolve('src/templates/single-post.js'),
-    postList: path.resolve('src/templates/post-list.js'),
-    tag: path.resolve('src/templates/tag-posts.js'),
-    tagsPage: path.resolve('src/templates/tags-page.js'),
-    authorPosts: path.resolve('src/templates/author-posts.js'),
+    post: path.resolve("src/templates/single-post.js"),
+    postList: path.resolve("src/templates/post-list.js"),
+    tag: path.resolve("src/templates/tag-posts.js"),
+    tagsPage: path.resolve("src/templates/tags-page.js"),
+    authorPosts: path.resolve("src/templates/author-posts.js"),
   }
 
   const res = await graphql(`
@@ -63,4 +64,31 @@ exports.createPages = async ({ actions, graphql }) => {
       },
     })
   })
+
+  // Get all tags
+  let tags = []
+  _.each(posts, edge => {
+    if (_.get(edge, "node.frontmatter.tags")) {
+      tags = tags.concat(edge.node.frontmatter.tags)
+    }
+  })
+
+  let tagPostCounts = {} // { tutorial: 2, design: 1}
+  tags.forEach(tag => {
+    // Or 0 cause it might not exist yet
+    tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1
+  })
+
+  // Remove duplicates
+  tags = _.uniq(tags)
+
+    // Tags page (all tags)
+    createPage({
+      path: '/tags',
+      component: templates.tagsPage,
+      context: {
+        tags,
+        tagPostCounts,
+      },
+    })
 }
