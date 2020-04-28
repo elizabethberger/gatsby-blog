@@ -21,4 +21,4 @@ const tagsPage = ({ pageContext }) => {
     </Layout>
     )
 }
-export default tagPage
+export default tagsPage

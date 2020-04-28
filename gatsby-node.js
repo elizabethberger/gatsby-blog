@@ -1,7 +1,7 @@
 const path = require("path")
 const { slugify } = require("./src/util/utilityFunctions")
 const authors = require("./src/util/authors")
-const _ = require('lodash')
+const _ = require("lodash")
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
@@ -22,7 +22,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const templates = {
     post: path.resolve("src/templates/single-post.js"),
     postList: path.resolve("src/templates/post-list.js"),
-    tag: path.resolve("src/templates/tag-posts.js"),
+    tag: path.resolve("src/templates/tags-posts.js"),
     tagsPage: path.resolve("src/templates/tags-page.js"),
     authorPosts: path.resolve("src/templates/author-posts.js"),
   }
@@ -82,13 +82,26 @@ exports.createPages = async ({ actions, graphql }) => {
   // Remove duplicates
   tags = _.uniq(tags)
 
-    // Tags page (all tags)
+  // Tags page (all tags)
+  createPage({
+    path: "/tags",
+    component: templates.tagsPage,
+    context: {
+      tags,
+      tagPostCounts,
+    },
+  })
+
+  //create tags posts pages
+
+  // Tag posts pages
+  tags.forEach(tag => {
     createPage({
-      path: '/tags',
-      component: templates.tagsPage,
+      path: `/tag/${_.kebabCase(tag)}`,
+      component: templates.tag,
       context: {
-        tags,
-        tagPostCounts,
+        tag,
       },
     })
+  })
 }
