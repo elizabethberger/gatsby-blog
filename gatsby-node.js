@@ -104,4 +104,26 @@ exports.createPages = async ({ actions, graphql }) => {
       },
     })
   })
+  // Create posts pagination pages
+  const postsPerPage = 2
+  const numberOfPages = Math.ceil(posts.length / postsPerPage)
+
+  Array.from({ length: numberOfPages }).forEach((_, index) => {
+    const isFirstPage = index === 0
+    const currentPage = index + 1
+
+    // Skip first page because of index.js
+    if (isFirstPage) return
+
+    createPage({
+      path: `/page/${currentPage}`,
+      component: templates.postList,
+      context: {
+        limit: postsPerPage,
+        skip: index * postsPerPage,
+        numberOfPages: numberOfPages,
+        currentPage: currentPage,
+      },
+    })
+  })
 }
