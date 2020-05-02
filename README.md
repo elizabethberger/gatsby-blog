@@ -13,6 +13,4 @@ My personal blog site : work still in progress. Here I want to describe programm
 
 ## To do
 
-* Add pagination
-* Author page
-* Tag page
+* Add great content :)
