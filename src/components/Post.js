@@ -32,7 +32,7 @@ const Post = ({title, author, slug, date, body, fluid, tags}) => {
                 <Link
                     to={slug}
                     className="btn btn-outline-primary float-right text-uppercase">
-                    Read more
+                    Czytaj więcej...
                 </Link>
             </CardBody>
         </Card>

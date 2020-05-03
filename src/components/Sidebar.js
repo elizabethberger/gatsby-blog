@@ -72,7 +72,7 @@ const Sidebar = ({ author, authorFluid }) => (
             />
           </FormGroup>
           <button className="btn btn-outline-success text-uppercase">
-            Subscribe
+            Subskrybuj
           </button>
         </Form>
       </CardBody>
@@ -80,7 +80,7 @@ const Sidebar = ({ author, authorFluid }) => (
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase">
-          Advertisement
+          Reklama
         </CardTitle>
         <img
           src="https://via.placeholder.com/320x200"
@@ -92,7 +92,7 @@ const Sidebar = ({ author, authorFluid }) => (
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
-          Recent Posts
+          Ostatnie posty
         </CardTitle>
         <StaticQuery
           query={sidebarQuery}
