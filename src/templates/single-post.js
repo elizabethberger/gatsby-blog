@@ -12,7 +12,7 @@ const SinglePost = ({ data, pageContext, location }) => {
   const post = data.markdownRemark.frontmatter
   const author = authors.find(x => x.name === post.author)
 
-  const baseUrl = 'https://gatsbytutorial.co.uk/'
+  const baseUrl = 'https://girlinit.com/'
 
   const disqusShortname = 'gatsby'
   const disqusConfig = {

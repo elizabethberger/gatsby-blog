@@ -13,8 +13,8 @@ const AboutPage = () => (
       <div className="col-md-5">
         <img src={MyImage} style={{ maxWidth: "100%" }} alt="Ela profile" />
       </div>
-      <div className="col-md-8">
-        <Card style={{ minHeight: "100%" }}>
+      <div className="col-md-7">
+        <Card style={{ minHeight: "90%" }}>
           <CardBody>
             <CardTitle>{authors[0].name}</CardTitle>
             <CardText>{authors[0].bio}</CardText>

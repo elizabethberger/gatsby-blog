@@ -1,5 +1,5 @@
 ---
-title: 'Third Post'
+title: 'Trzeci post'
 date: 2020-04-02 12:00:00
 author: 'Ela Szulc'
 image: ../../images/code2.jpg
