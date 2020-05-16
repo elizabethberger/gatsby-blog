@@ -12,7 +12,7 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="DevLover">
       <SEO title="Home page" />
-      <h1>Home page</h1>
+      <h1>Home</h1>
       <StaticQuery
         query={indexQuery}
         render={data => {

@@ -7,7 +7,7 @@ import MyImage from "../images/ja_2.jpg"
 import { slugify } from "../util/utilityFunctions"
 
 const AboutPage = () => (
-  <Layout pageTitle="Who Am I?">
+  <Layout pageTitle="Kim jestem??">
     <SEO title="Author" keywords={[`gatsby`, `application`, `react`]} />
     <Row className="mb-4">
       <div className="col-md-5">
