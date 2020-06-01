@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
   Card,
   CardTitle,
@@ -7,9 +7,9 @@ import {
   Form,
   FormGroup,
   Input,
-} from 'reactstrap'
-import { graphql, StaticQuery, Link } from 'gatsby'
-import Img from 'gatsby-image'
+} from "reactstrap"
+import { graphql, StaticQuery, Link } from "gatsby"
+import Img from "gatsby-image"
 
 const Sidebar = ({ author, authorFluid }) => (
   <div>
@@ -79,13 +79,11 @@ const Sidebar = ({ author, authorFluid }) => (
     </Card>
     <Card>
       <CardBody>
-        <CardTitle className="text-center text-uppercase">
-          Reklama
-        </CardTitle>
+        <CardTitle className="text-center text-uppercase">Reklama</CardTitle>
         <img
           src="https://via.placeholder.com/320x200"
           alt="Advert"
-          style={{ width: '100%' }}
+          style={{ width: "100%" }}
         />
       </CardBody>
     </Card>

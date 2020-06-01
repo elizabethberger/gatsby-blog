@@ -5,11 +5,16 @@ import SEO from "../components/seo"
 
 const MissionPage = () => (
   <Layout pageTitle="Misja">
-    <SEO title="Dlaczego piszę?" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Dlaczego piszę?"
+      keywords={[`gatsby`, `application`, `react`]}
+    />
     <Card style={{ minHeight: "10%" }}>
-        <CardBody>
-          Moją misją jest stworzenie miejsca, w którym opisuję swoje początki w świecie IT i postępy swojej nauki. Chciałabym, aby kazdy czytelnik znalezazł tu coś dla siebie.
-        </CardBody>
+      <CardBody>
+        Moją misją jest stworzenie miejsca, w którym opisuję swoje początki w
+        świecie IT i postępy swojej nauki. Chciałabym, aby kazdy czytelnik
+        znalezazł tu coś dla siebie.
+      </CardBody>
     </Card>
   </Layout>
 )

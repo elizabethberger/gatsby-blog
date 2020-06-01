@@ -1,11 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import Header from './header'
-import '../styles/index.scss'
-import Sidebar from './Sidebar'
-import Footer from './Footer'
-import { Row, Col } from 'reactstrap'
+import Header from "./header"
+import "../styles/index.scss"
+import Sidebar from "./Sidebar"
+import Footer from "./Footer"
+import { Row, Col } from "reactstrap"
 
 const Layout = ({ authorImageFluid, children, postAuthor }) => (
   <StaticQuery
