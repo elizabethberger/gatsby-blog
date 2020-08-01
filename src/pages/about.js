@@ -23,7 +23,7 @@ const AboutPage = () => (
               color="primary"
               href={`/author/${slugify(authors[0].name)}`}
             >
-              Zobacz posty
+              Look other posts
             </Button>
           </CardBody>
         </Card>

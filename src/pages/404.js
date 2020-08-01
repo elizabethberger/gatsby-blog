@@ -7,7 +7,7 @@ const NotFoundPage = () => (
   <Layout pageTitle="Something went wrong">
     <SEO title="404: Not found" />
     <Link className="btn btn-primary text-uppercase" to={"/"}>
-      Go home
+      Go to home page
     </Link>
   </Layout>
 )

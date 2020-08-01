@@ -11,9 +11,8 @@ const MissionPage = () => (
     />
     <Card style={{ minHeight: "10%" }}>
       <CardBody>
-        Moją misją jest stworzenie miejsca, w którym opisuję swoje początki w
-        świecie IT i postępy swojej nauki. Chciałabym, aby kazdy czytelnik
-        znalezazł tu coś dla siebie.
+        My goal is to create a place for programming enthusiasts. I can to focus
+        on javascript language tricks and basis.
       </CardBody>
     </Card>
   </Layout>
