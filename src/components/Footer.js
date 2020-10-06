@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () => (
   <div className="site-footer">
-    <h4 className="text-center">Girl in IT</h4>
+    <h4 className="text-center">Testuję z pasją</h4>
     <p className="text-center">Follow me</p>
     <div className="footer-social-links">
       <ul className="social-links-list">

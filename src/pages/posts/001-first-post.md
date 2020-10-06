@@ -6,4 +6,5 @@ image: ../../images/code.jpg
 tags:
 - personal
 ---
-Cześć! Kolejny blog o programowaniu...O nie... :) Będę pisała tu o tajnikach kodowania...może jednak nie taki tajnikach - a raczej podstawach. Trzymajcie się mocno, bo zaczynamy jazdę bez przymanki :)
+
+Strona będzie poświęcona trudom nauki, początkom które często bywają trudne ale bardzo satysfakcjonujące. Wszyscy dązmy do tego aby się doskonalić - być najlepszym w tym co robimy. Temu będzie poświęcona treść mojej strony - nieustannej drodze w poszukiwaniu harmonii między niewiedzą, a gonitwą za osiągnięciu swoich mentalnych i intelektualnych szczytów.

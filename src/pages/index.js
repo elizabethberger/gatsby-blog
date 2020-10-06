@@ -10,9 +10,8 @@ const IndexPage = () => {
   const postsPerPage = 2
   let numberOfPages
   return (
-    <Layout pageTitle="DevLover">
+    <Layout pageTitle="Tests">
       <SEO title="Home page" />
-      <h1>Home</h1>
       <StaticQuery
         query={indexQuery}
         render={data => {
