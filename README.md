@@ -1,6 +1,6 @@
 # Personal blog:
 
-My personal blog site : work still in progress. Here I want to describe programming issues that I face and how to deal with them.
+My personal blog site : work still in progress. Here I want to describe my job journey, testing issues and autolearning automatic testing.
 
 ## Technologies:
 
@@ -9,7 +9,7 @@ My personal blog site : work still in progress. Here I want to describe programm
 
 ## Link to the website : 
 
-[Personal website](https://girlinit.netlify.app/) :rocket:
+[Personal website](https://testujezpasja.netlify.app) :rocket:
 
 ## To do
 
