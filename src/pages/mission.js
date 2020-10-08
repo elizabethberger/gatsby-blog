@@ -11,8 +11,7 @@ const MissionPage = () => (
     />
     <Card style={{ minHeight: "10%" }}>
       <CardBody>
-        My goal is to create a place for programming enthusiasts. I can to focus
-        on javascript language tricks and basis.
+        Moją misją jest stworzenie przestrzeni, która będzie inspirowała młodych adeptów testowania ale równiez ekspertów w tej dziedzinie.
       </CardBody>
     </Card>
   </Layout>

@@ -25,4 +25,4 @@ Kilka ciekawostek na temat Selenium :
 6. Selenium Grid to serwer, który umożliwia testom korzystanie z instancji przeglądarek internetowych działających na zdalnych maszynach. W przypadku Selenium Grid jeden serwer działa jako centralny hub. Testy kontaktują się z centrum, aby uzyskać dostęp do wystąpień przeglądarki. W centrum znajduje się lista serwerów, które zapewniają dostęp do instancji przeglądarki (węzły WebDriver) i umożliwiają testom korzystanie z tych instancji. Selenium Grid umożliwia równoległe uruchamianie testów na wielu komputerach i centralne zarządzanie różnymi wersjami przeglądarek i konfiguracjami przeglądarek (zamiast w każdym indywidualnym teście).
 
 
-Na początek warto zapamiętać tyle! Następny post będzie obejmował konkretne zagadnienia :)
+Na początek warto zapamiętać tyle! :)
