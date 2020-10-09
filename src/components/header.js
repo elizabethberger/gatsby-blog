@@ -32,7 +32,7 @@ class Header extends React.Component {
           <div className="container">
             <div className="logo">
               <a href="/">
-                <img src="icons/icon.png" />
+                <img src="../icons/icon.png" alt="logo" />
               </a>
             </div>
             <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
