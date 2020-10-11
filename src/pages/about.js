@@ -7,14 +7,14 @@ import MyImage from "../images/ja_2.jpg"
 import { slugify } from "../util/utilityFunctions"
 
 const AboutPage = () => (
-  <Layout pageTitle="Kim jestem??">
+  <Layout pageTitle="Kim jestem?">
     <SEO title="Author" keywords={[`gatsby`, `application`, `react`]} />
-    <Row className="mb-4">
-      <div className="col-md-5">
+    <Row className="mb-3">
+      <div className="col-md-4">
         <img src={MyImage} style={{ maxWidth: "100%" }} alt="Ela profile" />
       </div>
       <div className="col-md-7">
-        <Card style={{ minHeight: "90%" }}>
+        <Card style={{ minHeight: "100%" }}>
           <CardBody>
             <CardTitle>{authors[0].name}</CardTitle>
             <CardText>{authors[0].bio}</CardText>
