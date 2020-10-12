@@ -9,7 +9,7 @@ My personal blog site : work still in progress. Here I want to describe my job j
 
 ## Link to the website : 
 
-[Personal website](https://testujezpasja.netlify.app) :rocket:
+[Personal website](https://testujezpasja.pl) :rocket:
 
 ## To do
 
