@@ -11,7 +11,7 @@ const MissionPage = () => (
     />
     <Card style={{ minHeight: "10%" }}>
       <CardBody>
-        Moją misją jest stworzenie przestrzeni, która będzie inspirowała młodych adeptów testowania ale równiez ekspertów w tej dziedzinie.
+        Strona powstała aby dzielić się wiedzą, inspirować ludzi, który chcą rozwijać swoją wiedzę z zakresu testowania.
       </CardBody>
     </Card>
   </Layout>

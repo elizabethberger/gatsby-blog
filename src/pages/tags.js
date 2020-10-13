@@ -7,7 +7,7 @@ const Tags = () => (
   <Layout pageTitle="Wszystkie tematy">
     <SEO title="Tags page" keywords={[`gatsby`, `application`, `react`]} />
     <Card style={{ minHeight: "10%" }}>
-      <CardBody>Tutaj będę zamieszczać zadania z rekrutacji.</CardBody>
+      <CardBody></CardBody>
     </Card>
   </Layout>
 )

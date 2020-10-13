@@ -1,6 +1,6 @@
 # Personal blog:
 
-My personal blog site : work still in progress. Here I want to describe my job journey, testing issues and autolearning automatic testing.
+My personal blog site : work still in progress. Here I want to describe my job journey, testing issues and learning automatic testing.
 
 ## Technologies:
 
