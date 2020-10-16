@@ -6,7 +6,7 @@
     font-family: $site-font;
   }
   a {
-    color: #024083;
+    color: #03458b;
     &:hover {
       color: #80afe2;
       text-decoration: none;
@@ -19,8 +19,6 @@
   }
   .navbar {
     background-color: white;
-    // border-right: 1px solid rgba(0, 0, 0, 0.4);
-    // border-left: 1px solid rgba(0, 0, 0, 0.4);
     border-bottom: 1px solid rgba(165, 164, 164, 0.4);
     line-height: 1;
   }

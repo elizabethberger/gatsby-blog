@@ -43,7 +43,7 @@ class Header extends React.Component {
                   <NavLink href="/mission">Misja</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/tags">Zadania</NavLink>
+                  <NavLink href="/contact">Współpraca</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/about">O mnie</NavLink>
