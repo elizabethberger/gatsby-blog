@@ -4,10 +4,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Tags = () => (
-  <Layout pageTitle="Wszystkie tematy">
+  <Layout pageTitle="Kontakt">
     <SEO title="Tags page" keywords={[`gatsby`, `application`, `react`]} />
     <Card style={{ minHeight: "10%" }}>
-      <CardBody></CardBody>
+      <CardBody>żżżżżż</CardBody>
     </Card>
   </Layout>
 )

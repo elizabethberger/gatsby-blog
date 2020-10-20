@@ -1,5 +1,5 @@
 ---
-title: 'Od czego zaczynam naukę Jmeter'
+title: 'Pierwszy test z uzyciem Jmeter'
 date: 2020-10-18 22:00:00
 author: 'Ela Szulc'
 image: ../../images/coding3.jpg
