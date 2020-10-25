@@ -1,5 +1,5 @@
 ---
-title: 'Selenium - geneza'
+title: 'Selenium - trochę teorii, którą warto znać!'
 date: 2020-04-01 12:00:00
 author: 'Ela Szulc'
 image: ../../images/code1.jpg

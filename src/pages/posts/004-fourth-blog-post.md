@@ -1,10 +1,11 @@
 ---
-title: 'Pierwszy test z uzyciem Jmeter'
+title: 'Jmeter - jak zacząć?'
 date: 2020-10-18 22:00:00
 author: 'Ela Szulc'
 image: ../../images/coding3.jpg
 tags:
 - jmeter
+- tutorial
 ---
 
 Zastanawialiście się kiedyś nad testami wydajnościowymi swojej aplikacji? Jaka powinna być właściwa wydajność stron internetowych bądź większych serwisów?
