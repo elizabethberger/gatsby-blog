@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const NotFoundPage = () => (
   <Layout pageTitle="Something went wrong">
-    <SEO title="404: Not found" /> Coś poszło nie tak :( <br></br><br></br>
+    <SEO title="404: Not found" /> Nie ma takiej strony :( <br></br><br></br>
     <Link className="btn btn-primary text-uppercase" to={"/"}>
       Strona główna
     </Link>

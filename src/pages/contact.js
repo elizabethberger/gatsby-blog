@@ -7,7 +7,7 @@ const Tags = () => (
   <Layout pageTitle="Kontakt">
     <SEO title="Tags page" keywords={[`gatsby`, `application`, `react`]} />
     <Card style={{ minHeight: "10%" }}>
-      <CardBody>żżżżżż</CardBody>
+      <CardBody>Wszelkie oferty współpracy proszę kierować na adres : elzszulc@gmail.com</CardBody>
     </Card>
   </Layout>
 )
