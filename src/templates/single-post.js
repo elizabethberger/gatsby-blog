@@ -57,7 +57,7 @@ const SinglePost = ({ data, pageContext, location }) => {
           </ul>
         </CardBody>
       </Card>
-      <h3 className="text-center">Share this post</h3>
+      <h3 className="text-center">Podziel się tym postem</h3>
       <div className="text-center social-share-links">
         <ul>
           <li>
